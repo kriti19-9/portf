@@ -30,8 +30,12 @@ header h1 {
     color: #fff; /* White text for contrast */
 }
 
+header nav {
+    display: flex;
+    gap: 20px;
+}
+
 header nav a {
-    margin-left: 20px;
     text-decoration: none;
     color: #fff;
     font-size: 1rem;
@@ -72,5 +76,34 @@ main {
 @keyframes fadeIn {
     to {
         opacity: 1;
+    }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    header nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    header nav a {
+        font-size: 0.9rem;
+        text-align: center;
+    }
+
+    .gallery-item {
+        flex: 1 1 calc(50% - 40px);
+        max-width: calc(50% - 40px);
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.2rem;
+    }
+
+    .gallery-item {
+        flex: 1 1 calc(100% - 40px);
+        max-width: calc(100% - 40px);
     }
 }
