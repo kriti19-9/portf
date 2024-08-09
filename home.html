@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editorial</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gupter:wght@400;500;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>K. Komal</h1>
+            <nav>
+                <a href="gallery.html">Gallery</a>
+                <a href="certificate.html">Certifications</a>
+                <a href="#resume">Testimony</a>
+            </nav>
+        </header>
+
+        <main>
+            <div class="left">
+                <button class="carousel-button left-button">&lt;</button>
+                <img id="carousel-image" src="image2.jpg" alt="hey, komal here">
+                <button class="carousel-button right-button">&gt;</button>
+            </div>
+            <div class="right">
+                <h1>INTRODUCTION</h1><br><br>
+                <p>A dedicated and experienced Content Writer with a proven track record 
+                    of six years in the field of interest, writing and exploring. I am currently 
+                    pursuing an internship at Bharati Vidyapeeth Dental College and 
+                    Hospital while actively engaged in Dental Research.</p>
+                <a href="#" id="see-more">See More</a>
+                <div id="additional-content" style="display:none;">
+                    <p>I Possess a strong command of the written word, and With a proven 
+                        track record of six years in content creation, including four years of 
+                        dedicated professional writing. 
+                    </p>
+                    <p>
+                        I have crafted engaging content for renowned publications such as the 
+                        such as Kolkata Buzz, ZEE News, Literary Mirror, and Bangalore 
+                        Times of India, Hindustan Times, The Pioneer, etc., and Websites 
+                        poetry collection and English Novel I am working on in which the former 
+                        Times. My passion for storytelling is evident in my forthcoming Hindi 
+                        research and preparing an article for the same.
+                        one is going to hit the market soon. I am actively engaged in dental 
+                    </p>
+                    <p>I have contributed to the practice of Dr. Akshay Deshmukh, a 
+                        renowned specialist in the field of PANKHKARMA and Herbal Medicine. 
+                        My role included developing initial content for the doctor’s website. 
+                        Dr. Deshmukh has notably served as the primary consultant for two 
+                        Olympic athletes.</p>
+                </div>
+            </div>
+        </main>
+
+        <section id="resume" style="margin-top: 50px;">
+            <h2>Resume</h2>
+            <p>You can download my resume below:</p>
+            <a href="kkres.pdf" download>Download Resume</a>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Information</h2>
+            <div class="contact-info">
+                <p><span class="contact-icon">📧</span>Email: <a href="mailto:kkomal9916@gmail.com">kkomal9916@gmail.com</a></p>
+                <p><span class="contact-icon">📞</span>Phone: +91 8969507008</p>
+                <p><span class="contact-icon">📷</span>Instagram: <a href="https://www.instagram.com/k_komal08?utm_source=qr&igsh=MTlwbGdzM2IzaHMzcQ==" target="_blank">k_komal08</a></p>
+                <p><span class="contact-icon">📜</span>Poetry Page: <a href="https://www.instagram.com/pensive_ode?utm_source=qr&igsh=MWt2bGZzeTk1NTVo" target="_blank">Pensive ode</a></p>
+            </div>
+        </section>
+        
+    </div>
+
+    <script>
+const images = [
+        'image2.jpg', 
+        'img3.jpg',
+        'img4.jpg',  
+    ];
+
+    let currentIndex = 0;
+    const imageElement = document.getElementById('carousel-image');
+
+    document.querySelector('.left-button').addEventListener('click', function() {
+        currentIndex = (currentIndex > 0) ? currentIndex - 1 : images.length - 1;
+        imageElement.src = images[currentIndex];
+    });
+
+    document.querySelector('.right-button').addEventListener('click', function() {
+        currentIndex = (currentIndex < images.length - 1) ? currentIndex + 1 : 0;
+        imageElement.src = images[currentIndex];
+    });
+        
+        document.getElementById('see-more').addEventListener('click', function(event) {
+            event.preventDefault(); 
+            document.getElementById('additional-content').style.display = 'block'; // Show the additional content
+            this.style.display = 'none'; 
+        });
+    </script>
+</body>
+</html>
